@@ -67,7 +67,12 @@ namespace In91TddLab.Tests
             var expected = new int[] { 1, 3, 5 };
 
             // 在記憶體的位址是不一樣的
-            Assert.AreEqual(actual, expected);
+            // 測試失敗
+            // Assert.AreEqual(actual, expected);
+
+            // 驗證兩個集合是否完全相等
+            // 測試成功
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
