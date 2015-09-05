@@ -79,10 +79,12 @@ namespace In91TddLab.Tests
             //this test will pass; when you override Equals(), AreEqual will invoke Order's Equals(), rather than Object's Equals()
 
             //驗證是否為同一個物件（相同）, 等同於 Assert.IsTrue(Object.RefrenceEquals(expected,actual))
-            //測試失敗
-            Assert.AreSame(expected, actual);
+            //測試失敗：比較記憶體位址
+            //Assert.AreSame(expected, actual);
 
-            //Assert.AreEqual(expected, actual); //驗證兩個物件是否相等（相等）, 等同於 Assert.IsTrue(Object.Equals(a,b))
+            //驗證兩個物件是否相等（相等）, 等同於 Assert.IsTrue(Object.Equals(a,b))
+            //測試失敗：也是比較記憶體位址
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
