@@ -101,7 +101,8 @@ namespace In91TddLab.Tests
         {
             var actual = new int[] { 1, 1, 3, 5 };
 
-            Assert.Inconclusive();
+            // 測試失敗，找到重複的 1
+            CollectionAssert.AllItemsAreUnique(actual);
         }
     }
 }
