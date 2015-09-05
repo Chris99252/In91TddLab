@@ -82,7 +82,6 @@ namespace In91TddLab.Tests
         {
             var zero = 0;
             var result = 1 / zero;
-            Assert.Inconclusive();
         }
     }
 }
