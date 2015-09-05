@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-//using ExpectedObjects;
+using ExpectedObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace In91TddLab.Tests
@@ -84,7 +84,12 @@ namespace In91TddLab.Tests
 
             //驗證兩個物件是否相等（相等）, 等同於 Assert.IsTrue(Object.Equals(a,b))
             //測試失敗：也是比較記憶體位址
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
+
+            //ExpectedObject 驗證兩物件是否相等
+            //測試成功：比較物件的值
+            expected.ToExpectedObject().ShouldEqual(actual);
+
         }
 
         [TestMethod]
