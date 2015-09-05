@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "In91TddLab\Calculator.csproj", "{4957FAAE-57E2-43BD-8B53-E5CFD87C7BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTests", "CalculatorTests\CalculatorTests.csproj", "{DF470E33-255B-4899-86A7-DB2B82BF978A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "In91TddLabTests", "CalculatorTests\In91TddLabTests.csproj", "{DF470E33-255B-4899-86A7-DB2B82BF978A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
