@@ -8,10 +8,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace In91TddLab.Tests
 {
     [TestClass()]
-    public class AddTest_first_1_second_2_should_be_3
+    public class MyCalculatorTests
     {
         [TestMethod()]
-        public void AddTest()
+        public void AddTest_first_1_second_2_should_be_3()
         {
             // Arrange 初始化
             var target = new MyCalculator(); // 測試目標叫 target
