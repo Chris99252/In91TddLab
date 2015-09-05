@@ -66,7 +66,8 @@ namespace In91TddLab.Tests
             var actual = new int[] { 1, 3, 5 };
             var expected = new int[] { 1, 3, 5 };
 
-            Assert.Inconclusive();
+            // 在記憶體的位址是不一樣的
+            Assert.AreEqual(actual, expected);
         }
 
         [TestMethod()]
