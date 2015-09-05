@@ -76,11 +76,12 @@ namespace In91TddLab.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [ExpectedException(typeof(DivideByZeroException))]
         [TestMethod]
         public void 該怎麼驗證Exception()
         {
-            //var zero = 0;
-            //var result = 1 / zero;
+            var zero = 0;
+            var result = 1 / zero;
             Assert.Inconclusive();
         }
     }
