@@ -88,8 +88,11 @@ namespace In91TddLab.Tests
 
             //ExpectedObject 驗證兩物件是否相等
             //測試成功：比較物件的值
-            expected.ToExpectedObject().ShouldEqual(actual);
+            //expected.ToExpectedObject().ShouldEqual(actual);
 
+            //ExpectedObject 驗證兩物件是否相同
+            //測試成功：比較物件的值
+            expected.ToExpectedObject().ShouldMatch(actual);
         }
 
         [TestMethod]
