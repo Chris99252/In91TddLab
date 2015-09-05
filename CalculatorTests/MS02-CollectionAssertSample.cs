@@ -82,7 +82,8 @@ namespace In91TddLab.Tests
             var actual = new int[] { 1, 3, 5 };
             var expected = new int[] { 3, 5, 1 };
 
-            Assert.Inconclusive();
+            // 測試成功
+            CollectionAssert.AreEquivalent(expected, actual);
         }
 
         [TestMethod()]
@@ -91,7 +92,8 @@ namespace In91TddLab.Tests
             var superset = new int[] { 1, 3, 5 };
             var subset = new int[] { 5, 3 };
 
-            Assert.Inconclusive();
+            // 測試成功
+            CollectionAssert.IsSubsetOf(subset, superset);
         }
 
         [TestMethod()]
