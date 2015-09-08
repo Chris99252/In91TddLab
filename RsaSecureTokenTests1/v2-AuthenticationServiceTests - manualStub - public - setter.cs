@@ -10,17 +10,17 @@ namespace RsaSecureToken.Tests
     [TestClass()]
     public class AuthenticationServiceTests
     {
-[TestMethod()]
-public void IsValidTest()
-{
-    var target = new AuthenticationService();
-    target.profile = new StubProfileDao();
-    target.rsaToken = new StubRsaTokenDao();
-    var actual = target.IsValid("joey", "91000000");
+        [TestMethod()]
+        public void IsValidTest()
+        {
+            var target = new AuthenticationService();
+            target.profile = new StubProfileDao();
+            target.rsaToken = new StubRsaTokenDao();
+            var actual = target.IsValid("joey", "91000000");
 
-    //always failed
-    Assert.IsTrue(actual);                       
-}
+            //always failed
+            Assert.IsTrue(actual);                       
+        }
     }
     internal class StubProfileDao : IProfileDao
     {
