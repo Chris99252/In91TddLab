@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProfileDao.cs" />
-    <Compile Include="IRsaTokenDao.cs" />
-    <Compile Include="v2-AuthenticationService - IoC.cs" />
+    <Compile Include="IProfileDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRsaTokenDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="v2-AuthenticationService - IoC - publics - setter.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
