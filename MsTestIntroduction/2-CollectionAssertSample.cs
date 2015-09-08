@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace In91TddLab.Tests
+namespace MsTestIntroduction.Tests
 {
     /// <summary>
     /// CollectionAssertSample 的摘要描述

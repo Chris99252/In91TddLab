@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using In91TddLab;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace In91TddLab.Tests
+namespace Calculator.Tests
 {
     [TestClass()]
     public class MyCalculatorTests

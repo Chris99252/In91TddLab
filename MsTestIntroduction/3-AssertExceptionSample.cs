@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace In91TddLab.Tests
+namespace MsTestIntroduction.Tests
 {
     /// <summary>
     /// AssertExceptionSample 的摘要描述
