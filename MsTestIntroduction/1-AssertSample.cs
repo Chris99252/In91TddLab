@@ -112,70 +112,72 @@ namespace MsTestIntroduction.Tests
 				Age = 10,
 			};
 
-			Assert.Inconclusive();
+            expected.ToExpectedObject().ShouldEqual(actual);
 		}
 
 		[TestMethod]
 		public void Test_PersonCollection_Equals_with_ExpectedObjects()
 		{
-			var expected = new List<Person>
-			{
-				new Person { Id=1, Name="A",Age=10},
-				new Person { Id=2, Name="B",Age=20},
-				new Person { Id=3, Name="C",Age=30},
-			};
+            var expected = new List<Person>
+            {
+	            new Person { Id=1, Name="A",Age=10},
+	            new Person { Id=2, Name="B",Age=20},
+	            new Person { Id=3, Name="C",Age=30},
+            };
 
-			var actual = new List<Person>
-			{
-				new Person { Id=1, Name="A",Age=10},
-				new Person { Id=2, Name="B",Age=20},
-				new Person { Id=3, Name="C",Age=30},
-			};
+            var actual = new List<Person>
+            {
+	            new Person { Id=1, Name="A",Age=10},
+	            new Person { Id=2, Name="B",Age=20},
+	            new Person { Id=3, Name="C",Age=30},
+            };
 
-			Assert.Inconclusive();
+            expected.ToExpectedObject().ShouldEqual(actual);
 		}
 
 		[TestMethod]
 		public void Test_ComposedPerson_Equals_with_ExpectedObjects()
 		{
-			var expected = new Person
-			{
-				Id = 1,
-				Name = "A",
-				Age = 10,
-				Order = new Order { Id = 91, Price = 910 },
-			};
+            var expected = new Person
+            {
+            	Id = 1,
+            	Name = "A",
+            	Age = 10,
+            	Order = new Order { Id = 91, Price = 910 },
+            };
+            
+            var actual = new Person
+            {
+            	Id = 1,
+            	Name = "A",
+            	Age = 10,
+            	Order = new Order { Id = 91, Price = 910 },
+            };
 
-			var actual = new Person
-			{
-				Id = 1,
-				Name = "A",
-				Age = 10,
-				Order = new Order { Id = 91, Price = 910 },
-			};
-
-			Assert.Inconclusive();
+            expected.ToExpectedObject().ShouldEqual(actual);
 		}
 
 		[TestMethod]
 		public void Test_PartialCompare_Person_Equals_with_ExpectedObjects()
 		{
-			var expected = new
-			{
-				Id = 1,
-				Age = 10,
-				Order = new Order { Id = 91 },
-			};
+            // 透過匿名型別，只比較property的value是否相等
+            var expected = new 
+            {
+            	Id = 1,
+            	Age = 10,
+            	Order = new { Id = 91 },
+            };
+            
+            var actual = new Person
+            {
+            	Id = 1,
+            	Name = "B",
+            	Age = 10,
+            	Order = new Order { Id = 91, Price = 910 },
+            };
 
-			var actual = new Person
-			{
-				Id = 1,
-				Name = "B",
-				Age = 10,
-				Order = new Order { Id = 91, Price = 910 },
-			};
-
-			Assert.Inconclusive();
+            //expected.ToExpectedObject().ShouldEqual(actual);
+            expected.ToExpectedObject().ShouldMatch(actual);
 		}
 
 		[TestMethod]
@@ -199,7 +201,14 @@ namespace MsTestIntroduction.Tests
 			actual.Rows.Add(2, "B", 20);
 			actual.Rows.Add(3, "C", 30);
 
-			Assert.Inconclusive();
+            //compare by ItemArray, just compare the value without caring column name; the disadvantage is that error information didn't show what column's value is different;
+
+            //使用強型別，select ItemArray
+
+            var expectedItemArrayCollection = expected.AsEnumerable().Select(dr => dr.ItemArray);
+            var actualItemArrayCollection = actual.AsEnumerable().Select(dr => dr.ItemArray);
+
+            expectedItemArrayCollection.ToExpectedObject().ShouldEqual(actualItemArrayCollection);
 		}
 	}
 
