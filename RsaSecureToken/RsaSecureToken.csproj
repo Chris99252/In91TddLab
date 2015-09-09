@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="v2-AuthenticationService - IoC - function- paramenter.cs" />
     <Compile Include="IProfileDao.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +47,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="v2-AuthenticationService - IoC - protected - virtual - function.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
