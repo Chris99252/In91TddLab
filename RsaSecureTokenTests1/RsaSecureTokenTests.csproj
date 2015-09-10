@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.8.2.0\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -52,13 +55,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StubAuthenticationService.cs" />
-    <Compile Include="v2-AuthenticationServiceTests - manualStub - protected - virtual - function.cs" />
+    <Compile Include="v3-AuthenticationServiceTests - dynamicStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RsaSecureToken\RsaSecureToken.csproj">
       <Project>{6e62c688-ad27-4d39-b309-be705b8b2a1c}</Project>
       <Name>RsaSecureToken</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
